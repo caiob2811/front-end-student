@@ -1,0 +1,54 @@
+<table>
+    <caption>Produtos</caption>
+    <thead> <!-- cabeçalho-->
+        <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody> <!--corpo-->
+        <tr>
+            <td>Ipad</td>
+            <td>2500.00</td>
+            <td>5</td>
+            <td>12500.00</td>
+        </tr>
+        <tr>
+            <td>Iphone</td>
+            <td>3500.00</td>
+            <td>3</td>
+            <td>10500.00</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">Total</td> <!-- aumenta a quantidade de colunas na celula-->
+            <td>23000.00</td>
+        </tr>
+    </tfoot>
+</table>
+
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    th,td {
+        padding: 10px;
+    }
+    
+    thead tr {
+        border-bottom: solid 3px #000;
+    }
+    tbody tr:hover {
+        background-color: darkgrey;
+    }
+
+    tfoot {
+        background-color: #000;
+        color: aliceblue;
+        font-weight: bold;
+    }
+</style>
