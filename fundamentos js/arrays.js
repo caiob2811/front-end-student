@@ -9,7 +9,7 @@ console.log(valores.length) // diz quantos elementos tem no array
 valores.push({id: 3}, false, null, 'teste') // add valores no array
 console.log(valores)
 
-console.log(valores.pop()) // retiraa do array esse valor
+console.log(valores.pop()) // retira do array esse valor
 
 delete valores[0] // deleta o valor do array
 console.log(valores)
