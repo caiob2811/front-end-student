@@ -10,7 +10,7 @@ console.log(aprovados[2])
 console.log(aprovados[3])
 
 aprovados[3] = 'Paulo' // usado para substituir o valor
-aprovados.push('Abia') // usado para adicionar um novo valor
+aprovados.push('Abia') // usado para adicionar um novo valor na ultima posição
 console.log(aprovados.length)
 
 aprovados[9] = 'Rafael'
