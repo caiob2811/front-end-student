@@ -5,7 +5,7 @@ console.log(pilotos)
 pilotos.push('Caio')
 console.log(pilotos)
 
-pilotos.shift() // tira  primeiro elemento do array
+pilotos.shift() // tira o primeiro elemento do array
 console.log(pilotos)
 
 pilotos.unshift('Kobayashi') // coloca o elemento no inicio do array
