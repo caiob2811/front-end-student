@@ -1,4 +1,5 @@
 // o primeiro elemento é o acumulador e o segundo o elemento atual
+// sentido de reduzir, agregar
 
 const alunos = [
     { nome: 'João', nota: 7.3, bolsista: false},
