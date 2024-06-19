@@ -9,7 +9,7 @@ const alunos = [
 ]
 
 console.log(alunos.map(a => a.nota))
-const resultado = alunos.map(a => a.nota).reduce(function(acumulador, atual){ // reduce (tem um for dentro) recebe uma callback(que tem o acumulador e o valor incial podendo ter o indice e o array original)
+const resultado = alunos.map(a => a.nota).reduce(function(acumulador, atual){ //reduce(tem um for dentro) recebe uma callback(que tem o acumulador e o valor inicial podendo ter o indice e o array original)
     console.log(acumulador, atual)
     return acumulador + atual
 }, 0)
