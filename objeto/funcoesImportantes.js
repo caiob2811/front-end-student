@@ -6,7 +6,7 @@ const pessoa = {
 
 console.log(Object.keys(pessoa)) // te da os nomes dos atributos
 console.log(Object.values(pessoa)) // te fala os valores do objeto
-console.log(Object.entries(pessoa)) // te da sub-arrays com as chaves e seus valores
+console.log(Object.entries(pessoa)) // retorna uma matriz dos pares chave/valor de um objeto e O método Object.entries() não altera o objeto original.
 
 Object.entries(pessoa).forEach(([chave, valor]) => { // mesma coisa so que sem sub-arrays porque você desestrutura o array
     console.log(`${chave}: ${valor}`)

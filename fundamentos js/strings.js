@@ -11,7 +11,7 @@ console.log(escola.substring(0,3)) // vai do zero, e para antes do 3, sem inclui
 console.log('Escola '.concat(escola).concat("!")) 
 console.log('Escola ' + escola + "!") 
 
-console.log(escola.replace(3,'e'))
+console.log(escola.replace(3,'e')) // troca o valor do indice pelo valor que você quiser
 
 console.log('Ana,Maria,Pedro'.split(',')) // usa a string para quebrar a string em array
 
