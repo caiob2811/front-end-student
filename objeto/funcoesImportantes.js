@@ -34,11 +34,10 @@ obj.c = 1234
 
 console.log(obj)
 
-Object.is() //O método é usado para comparar se dois valores são iguais.
+//Object.is() //O método é usado para comparar se dois valores são iguais.
 
-Object.is() //retorna se os valores forem iguais e caso contrário. Ele difere do operador de igualdade estrita no tratamento 
+//Object.is() //retorna se os valores forem iguais e caso contrário. Ele difere do operador de igualdade estrita no tratamento 
 //de NaN e zero positivo/negativo.truefalse===
 
-Syntax:
-
-Object.is(value1, value2)
+//Syntax:
+//Object.is(value1, value2)
