@@ -1,0 +1,50 @@
+<video id "meuVideo" width="800" height="450" controls autoplay controlsList="nodownload"> <!--controls aparece a funções de vídeo: pausar, volume e etc...--> <!-- autoplay - começa automaticamente, controls list não permite fazer download-->
+    <source src="https://www.youtube.com/embed/I1vgtswaIfE?si=bjFxzPyvyh6Wt8pC" type="video/mp4">
+    Seu Browser não suporta a tag video
+</video>
+
+<div wm-progress ="meuVideo" class="progresso">
+    <div></div>
+</div>
+
+<div>
+    <button wm-play="meuVideo">Play</button>
+    <button wm-pause="meuVideo">Pause</button>
+</div>
+
+<style>
+    .progresso{
+        height: 20px;
+        width: 500px;
+        border: solid 1px #000000;
+        margin: 20px;
+    }
+    .progresso > div {
+        background-color: #629ff0;
+        color: #fff;
+        height: 100%;
+        text-align: right;
+        font-size: 14px;
+        width: 0%;
+        transition: 2s;
+    }
+</style>
+
+<script>
+    function configurarVideo(id) {
+        const video = document.getElementById(id)
+        video.oncontextmenu = () => false // não deixa abrir o menu de contexto( de baixar)
+
+        document.querySelector(`[wm-play=${id}]`).onclick = e => video.play() // só clicar no botão q da play
+        document.querySelector(`[wm-pause-${id}]`).onclick = e => video.pause() // só clicar nop botão q da pause
+
+        setInterval(() => {
+            const percentual = (video.currentTime / video.duration) * 100
+            const valorDiv = document.querySelector(`[wm-progress=${id}]> div`)
+            valorDiv.style.width = `${percentual}%`
+            valorDiv.innerHTML = `${percentual.toFixed(1)}%` // mostra o texto dentro de uma div
+        }, 500) // quanto em quanto tempo a funcao setInterval vai rodar 500ms
+    }
+
+    configurarVideo('meuVideo')
+</script>
