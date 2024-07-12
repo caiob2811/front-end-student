@@ -6,7 +6,48 @@
     <title>Flexbox #01</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+       .big {
+           font-size: 1.5em;
+       }
+
+       .flex-container {
+        display: flex;
+        flex-direction: column;/*indica como vai se comportar*/
+        flex-direction: column-reverse; /*inverte a ordem*/
+        flex-direction: row-reverse; /*linha reversa, como se fosse float right*/
+        flex-direction: row; /*linha normal, como se fosse float left*/
+        width: 50%;
+        flex-wrap: wrap; /*quebra de linha*/
+        flex-wrap: wrap-reverse; /*quebra de linha reversa*/
+        flex-flow: row wrap; /*mesma coisa do flex-wrap*/
+        height: 200px;
+        flex-flow: column-reverse wrap; /*coluna reverse com quebra de linha*/
+        flex-flow: row wrap;
+
+        justify-content: flex-start; /*justificando os elementos com o flex-start*/
+        justify-content: flex-end; /*deixa no fim*/
+        justify-content: center; /*deixa no centro*/
+        justify-content: space-around; /*deixa espacado nas laterais e no meio*/
+        flex-direction: row-reverse;
+        justify-content: space-between; /*deixa espacado entre*/
+
+        /*Cross Axis*/
+
+        height: 400px;
+        align-items: stretch; /*estica os itens*/
+        align-items: baseline; /*alinha os itens*/
+        align-items: flex-start; /*alinha npelo início*/
+        align-items: flex-end; /*alinha no final*/
+        align-items: center; /*alinha no meio*/
+        
+        /*mais de uma linha*/
+
+        align-content: flex-start; /*todas as linhas vão pro inicio do flex-container*/
+        align-content: end; /*todas as linhas vão pro final do flex-container*/
+        align-content: center; /*todas as linhas vão no meio do flex-container*/
+        align-content: space-around; /*deixa espacado nas laterais e no meio*/
+        align-content: space-between; /*fica espaço entre as linhas, mas não embaixo*/
+    }
     </style>
 </head>
 
@@ -14,7 +55,7 @@
     <div class="flex-container tag nolabel">
         <div class="tag nolabel">1</div>
         <div class="tag nolabel">2</div>
-        <div class="tag nolabel big">3</div>
+        <div class="big">3</div>
         <div class="tag nolabel">4</div>
         <div class="tag nolabel">5</div>
         <div class="tag nolabel">6</div>
