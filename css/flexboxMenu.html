@@ -51,9 +51,24 @@
             background: #f50a31;
             color: #fff;
         }
-        /* ==================== */
-        /* Solução com Flex Box */
-        /* ==================== */
+
+        .cabecalho{
+            display: flex;
+            align-items: center; /*centralizou o cross axis*/
+            justify-content: space-between;
+        }
+
+        .menu{
+            flex-grow: 10; /*botou o menu pra crescer*/
+        }
+
+        .menu ul{
+            display: flex; /*colocou todos na mesma linha*/
+        }
+
+        .menu li {
+            margin: 0 10px; /*eixo vertical 0, horizontal 10*/
+        } 
     </style>
 </head>
 
