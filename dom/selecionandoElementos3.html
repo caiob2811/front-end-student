@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #03</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        form input,
+        form select,
+        form button {
+            margin: 10px;
+            font-size: 1.6em;
+        }
+    </style>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Formulário</h1>
+    <form name="pesquisa" action="http://www.google.com.br/search">
+        <input type="text" name="q" placeholder="Digite o termo...">
+        <select name="hl">
+            <option value="pt-br">Português (Brasil)</option>
+            <option value="en-us">Inglês (Americano)</option>
+        </select>
+        <button>Pesquisar</button>
+    </form>
+    <script>
+       console.log(document.forms) /*te mostra no htmlCollection pelo inspecionar quantos forms tem*/
+       console.log(document.forms[0]) /*te mostra o primeiro form, de acordo com o indice*/
+       console.log(document.getElementsByName('pesquisa')) /*traz o NodeList*/
+       console.log(document.pesquisa)/*ele vai procurar o elemento que tem nome pesquisa e retorna pra você*/
+       console.log(document.pesquisa.q) /*entrou no form name que tem nome pesquisa e foi no name q(input)*/
+       document.pesquisa.q.value = 'linux' /*vai no form pesquisa depois no input q e vai colocar o valor linux*/
+       document.pesquisa.hl.value = 'en.us' /*vai no form pesquisa depois no select hl e vai colocar o valor en.us*/
+
+       console.log(document.pesquisa.hl.selectedIndex)
+    </script>
+</body>
+
+</html>

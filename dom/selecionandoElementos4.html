@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #04</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <p>Início</p>
+    </div>
+    <div>
+        <ul>
+            <li>Pedro</li>
+            <li>Ana</li>
+            <li>Bia</li>
+        </ul>
+    </div>
+    <div>
+        <p>Fim</p>
+    </div>
+    <script>
+       function log () {
+           console.log(this)
+       }
+
+       HTMLCollection.prototype.log = log /**/
+       HTMLElement.prototype.log = log /* */
+       NodeList.prototype.log = log
+       Node.prototype.log = log
+
+       const lista = document.querySelector('div ul')
+       lista.parentNode.log() /*elemento pai/console.log(lista.parentNode)*/
+       lista.childNodes.log() /*retorna um texto no meio do resultado, mas tem efeito colateral*/
+       
+       const primeiro = lista.firstChild
+       primeiro.log() /*(ul) vai ser um elemento textual*/
+       primeiro.nextSibling.log() /*li irmão de um elemento textual*/
+
+       const ultimo = lista.lastChild
+       ultimo.log()
+       ultimo.previousSibling.log() /*pega antes do elemento que você quer*/
+
+       lista.children.log() /*traz os elementos definidos*/
+       lista.firstElementChild.log() /*traz o primeiro elemento, tag no caso pedro*/
+       lista.lastElementChild.log() /*traz o ultimo elemento, tag no caso bia*/
+       lista.parentNode.previousElementSibling.log() /*da o elemento irmão anterior o parent da lista */
+       lista.parentNode.nextElementSibling.log() /*da o elemento irmão posterior o parent da lista */
+
+       document.querySelectorAll('div ul li').log() /*assim pega o que você quer, e não pega os textos*/
+
+    </script>
+</body>
+
+</html>

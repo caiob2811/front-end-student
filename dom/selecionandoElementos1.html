@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #01</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo">.terceiro .ultimo</div>
+
+
+    <script>     /*pega o elemento pelo id*/               /*adicionou a classe destaque que está no css*/
+        document.getElementById('primeiro').classList.add('destaque')
+
+        const divs = document.getElementsByTagName('div') /*pega todos os elemento(s) com a tag div*/
+        Array.from(divs).forEach(e => e.classList.remove('destaque')) /*1° forma de transformar um htmlCollection em array, pra fazer interações*/
+
+        const divsArray = [...divs] /*2° forma transformar um htmlCollection em array usando o operador spread, pra fazer interacoes*/
+        divsArray.forEach(e => e.classList.add('destaque'))
+
+        const ultimosElementos = document.getElementsByClassName('ultimo') /*pega todos os elemento(s) com a classe .ultimo*/
+        for (let e of ultimosElementos) { /* mesmo que não transforme para array, você consegue interar com os elementos*/
+            e.classList.remove('destaque')
+        }
+       
+    </script>
+</body>
+</html>
