@@ -22,6 +22,43 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        body {
+            display: grid; /*css trabalha com linhas e colunas (2 dimensões)*/
+            grid-template-columns: 50% 50%; /*primeira coluna tem 50% e a segunda 50%*/
+            grid-template-columns: repeat(4, 8.33% 8.33% 8.33%); /*repete 4 vezes , com 8.33% cada uma, ou seja terá 12 colunas com 8.33% cada*/
+            grid-template-columns: repeat(4, 8.33%); /*repete 4 vezes , com 8.33% cada uma, ou seja terá 12 colunas com 8.33% cada*/
+            grid-template-columns: repeat(11, 100px); /*repete 11 vezes , com 100px cada uma, ou seja terá 12 colunas com 100px cada*/
+            /*minman(100px, 300px) 100 de min e 300 de maximo*/
+            grid-template-columns: 200px 20% 1fr; /*terá 3 colunas, 200px para a primeira, 20% para a segunda e 1fr(pega o que sobrou) para a terceira*/
+            grid-template-columns: 3fr 6fr 3fr; 
+
+            grid-template-rows: 50% 25% 12.5% 12.5% ; /*aplica para as linhas, primeira linha tem 50%, segunda 25%, terceira 12.5% e quarta 12.5%*/
+            grid-template-rows: 100px 1fr; /*primeira tem 100px, segunda tem 1fr, e a terceira e quarta pega o que sobrou*/
+            grid-template-rows: 100px auto; /*auto distribui automaticamente as outras linhas*/
+        }
+
+        .d8{
+            grid-column-start: 2; /*onde vai começar na coluna tal*/
+            grid-column-end: 4; /*onde vai terminar na coluna tal*/
+            grid-column-end: span 2; /*começa a partir da linha 2 e ocupa 2 casas*/
+            grid-row-start: 3; /*onde vai começar na linha tal*/
+            grid-row-end: 5; /*onde vai terminar na linha tal*/
+            grid-row-end: span 2; 
+        }
+
+        .d10, .d11 {
+            /*podem se sobrepor*/
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            grid-row-end: span 1;
+        }
+        .d10 {
+            z-index: 10; /*profundidade dos elementos, quem vai ficar na frente de quem*/
+        }
+
+
     </style>
 </head>
 
