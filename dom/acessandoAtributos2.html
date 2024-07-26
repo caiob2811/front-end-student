@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset='UTF-8'>
     <title>Acessando Atributos #02</title>
@@ -17,7 +16,29 @@
         </ul>
     </div>
     <script>
-        // ...
+        const lista = document.querySelector('div ul [destino="escritório"]') /*ou (#compras*/
+        console.log('Elemento "ul"..........')
+        console.log('childNodes', lista.childNodes)
+        console.log('destino', lista.destino)
+        console.log('getAttribute', lista.getAttribute('destino'))
+        console.log('hasAttribute', lista.hasAttribute)/*pra se saber tem o atributo esta ou não presente dentro de um elemento*/
+        lista.setAttribute('destino, empresa')/*adiciona ou altera o produto*/
+        lista.setAttribute('status', 'aberto')/*adiciona ou altera o produto*/
+        lista.removeAttribute('destino') /*remove o atributo*/
+        console.log(lista.dataset) /*referencia ao data-urgenica que é tratado diferente por ter - linha(12*/
+
+        lista.dataset.urgencia = 4 /*valor alterado de 5 para 4, linha(12)*/
+        lista.data-urgencia /*não pode, por isso acessa pela string*/
+        console.log(lista.getAttribute('data-urgencia'))
+
+        //cuidados 
+        const label = document.querySelector('label')
+        console.log(label.for) // não vai acessar
+        console.log(label.htmlFor) // acessa
+        console.log('getAttribute', ('for')) // acessa
+        console.log('getAttribute', ('htmlFor')) // assim não acessa
+
+
     </script>
 </body>
 

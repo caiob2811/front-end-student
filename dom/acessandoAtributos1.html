@@ -15,7 +15,28 @@
         <img src='http://files.cod3r.com.br/curso-web/logo-estreita.png' alt='logo'>
     </div>
     <script>
-        // ...
+        const img = document.querySelector('img') /*'seleciona uma tag', '.uma classe, #um id, '[uma propriedade]'*/
+        console.log('getAttribute', img.getAttribute('src')) /*possibilidade de acessar os atributos pelo getAttribute*/ /*acessa a partir uma string*/
+        console.log('src', img.src)/*acessa colocando o nome do atributo*/
+        console.log('["src"]', img ['src']) /*mais resumido que o getAttribute*/
+        console.log('alt', img.alt) /*acessa colocando o nome do atributo*/
+
+        console.log('Elemento "img".......') /*acessa por elemento*/
+        console.log('NodeType', img.nodeType) /*todos so elementos ou atributos tem um elemento NodeType, nodeType 1 = elemento, 2 = atributo*/
+        console.log('NodeName', img.nodeName) /*por acessar pelo nome do atributo*/
+
+        const src = img.getAttributeNode('src') /*acessa por atributo*/
+        console.log('Atributo "src".......')  /*nodeType 2 = atributo*/
+        console.log('NodeType',src.nodeType)
+        console.log('NodeName', src.nodeName)
+        console.log('NodeValue', src.nodeValue)
+
+        const link = document.querySelector('a')
+        console.log('Elemento "a"..........')
+        console.log('href', link.href)
+        console.log('firstChild.nodeType', link.firstChild.nodeType) /*pode acessar pelo filho*/ /*NodeType 3 = texto*/
+        link.firstChild.value = 'novo texto' 
+
     </script>
 </body>
 
