@@ -9,7 +9,35 @@
 
 <body class='conteudo exercicio'>
     <script>
-        // ...
+        const body = document.querySelector('body')
+
+        const div1 = document.createElement('div') //cria um elemento
+        div1.classList.add('destaque') // dentro da div1, adicionou a classe.
+        div1.innerHTML = 'Primeiro'
+
+        const div2 = document.createElement('div')
+        div2.setAttribute('wm-attributo', 'valor')
+        div2.innerHTML = 'Segundo'
+        
+        const p = document.createElement('p')
+        p.innerHTML = 'Terceiro'
+
+        const div3 = document.createElement('div')
+        div3.appendChild(p) // p vai ser adicionado como último filho, como a div3 só tem um elemento, ele será o primeiro.
+
+        body.appendChild(div1)
+        body.appendChild(div2)
+        body.appendChild(div3) // vai ser adicionado a div3 e seus filhos também.
+
+        const texto = document.createTextNode('Antes...') //podia usar o createElement
+        div3.insertBefore(texto, div3.childNodes[0])// coloca o elemento que você quer passar um novo elemento no caso(div3) você passa o elemento novo(texto) e 
+        //diz qual posição ele fica, no caso antes da posição[0]
+
+        const div4 = div3.cloneNode(true) //clona o elemento, e os filhos. Se passa falso não copia os filhos.
+        body.appendChild(div4) //vai herdar os filhos da div3.
+        body.removeChild(div3) //remove o elemento
+
+        
     </script>
 </body>
 
