@@ -48,16 +48,16 @@
         const items = document.querySelectorAll('[wm-dropzone] .item')
         items.forEach((item, index) => { // index = indice
             item.draggable = true // posibilita que o item possa ser arrastado, false não permite.
-            item.id = item.id || `draggable-item-${index}` 
-            item.ondragstart = e => { // quando o item comecar a ser arrastado, ele vai setar o id do item.
-                e.dataTransfer.setData('item-id', e.target.id)
+            item.id = item.id || `draggable-item-${index}` // se o id for falso vai setar o indice, colocou indice para gerar ids diferentes.
+            item.ondragstart = e => { // quando o elemento começar a ser arrastado, ele vai setar o evento(dataTransfer.setData) que vai ser o id do item.
+                e.dataTransfer.setData('item-id', e.target.id) // e vai pegar o e.target id.
             }
 
             const dropzones = document.querySelectorAll('[wm-dropzone]')
             dropzones.forEach(dropzone => {
-                dropzone.ondragover = e => e.preventDefault() // ondragover = acontece antes de arrastar
+                dropzone.ondragover = e => e.preventDefault() // ondragover = termina de arrastar.
                 dropzone.ondrop = function(e) {
-                    const id = e.dataTransfer.getData('item-id')
+                    const id = e.dataTransfer.getData('item-id') // setou o item id(ebento que está arrastando)pegou ele e setou no evento dragstart e pegou ele no ondrop.
                     const item = document.getElementById(id)
                     e.target.appendChild(item)  //permite os elementos ficarem um dentro do outro.
                     dropzone.appendChild(item) // não permite os elementos ficarem um dentro do outro.
