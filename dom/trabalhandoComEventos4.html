@@ -31,6 +31,34 @@
         <button wm-submit>Pesquisar</button>
     </form>
     <script>
-        // ...
+      /* const submit = document.querySelector('[wm-submit]')
+       submit.onclick =- function (e) {
+        e.preventDefault()
+
+         const form = (e.target.parentNode) //vai pegar o elemento pai.
+         const formData = new FormData(form)
+         formData.append('ajax', true) // adicionou uma nova formação no formData
+         console.log(formData.get('q')) // verificar o valor
+         console.log(formData.has('hl')) // verificar se tem o valor
+
+        for (let dado of formData) {
+            console.log(dado)
+        }
+       }
+ */
+        const form = document.forms[0] // desse jeito não permite ele navegar(ir pro google)
+        form.onsubmit = function (e) {
+        e.preventDefault()
+
+         const form = e.target //vai pegar o elemento pai.
+         const formData = new FormData(form)
+         formData.append('ajax', true) // adicionou uma nova formação no formData
+         console.log(formData.get('q')) // verificar o valor
+         console.log(formData.has('hl')) // verificar se tem o valor
+
+         for (let dado of formData) {
+            console.log(dado)
+        }
+       }
     </script>
 </body>
