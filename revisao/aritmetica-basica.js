@@ -8,7 +8,7 @@ let soma = 5 + 5
 let subtracao = 5 - 5
 let multi = 5 * 5
 let div = 5 / 5
-let modulo = 10 % 5 
+let modulo = 10 % 5 // para saber o resto, resto 0. 
 
 
 console.log(soma)
