@@ -39,4 +39,3 @@ function timeOfLife (age) {
 }
 
 timeOfLife(56)
-C

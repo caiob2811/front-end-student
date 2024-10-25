@@ -5,4 +5,3 @@ function calculoImc(weight, height) {
 }
 
 console.log(calculoImc(70,1.70))
-
