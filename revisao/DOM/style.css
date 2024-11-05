@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+  }
+  
+h1 {
+    margin: 1% 1%;
+    font-family: 'Courier New', Courier, monospace;
+    color: orange;
+}
+
+h1:hover {
+    color: lightcoral;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: 0 8px;
+}
+
+a:hover {
+    color: lightblue;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.big {
+    font-size: 100px;
+}
+

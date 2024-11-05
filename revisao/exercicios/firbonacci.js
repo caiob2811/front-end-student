@@ -13,4 +13,5 @@ function firbonacciGenerator(n) {
     console.log(output)
 }
 
+
 firbonacciGenerator(250)
